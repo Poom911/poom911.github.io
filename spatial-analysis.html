@@ -1,15 +1,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+        content="width=device-width, initial-scale=1.0">
+
   <meta name="description"
-        content="Poom's Spatial Analysis Portfolio">
+        content="Poom's GIS and Spatial Analysis Portfolio">
+
   <title>Spatial Analysis | Poom</title>
 
   <style>
+
     :root {
       --bg: #f8f8f6;
       --white: #ffffff;
@@ -19,13 +23,19 @@
       --border: #e5e7e3;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
@@ -34,12 +44,21 @@
       text-decoration: none;
     }
 
-    a:hover { color: var(--green); }
+    a:hover {
+      color: var(--green);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 4px;
+    }
 
     .container {
       width: min(1050px, 90%);
       margin: auto;
     }
+
+    /* Navigation */
 
     header {
       background: var(--white);
@@ -50,10 +69,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
       padding: 22px 0;
     }
 
     .logo {
+      font-size: 16px;
       font-weight: bold;
       letter-spacing: 1px;
     }
@@ -64,6 +85,8 @@
       font-size: 14px;
       color: var(--muted);
     }
+
+    /* Hero Section */
 
     .hero {
       padding: 100px 0 70px;
@@ -83,13 +106,17 @@
       margin: 22px 0;
     }
 
-    h1 span { color: var(--green); }
+    h1 span {
+      color: var(--green);
+    }
 
     .intro {
       max-width: 700px;
       color: var(--muted);
       font-size: 17px;
     }
+
+    /* Selected Work */
 
     .work {
       padding: 20px 0 110px;
@@ -120,6 +147,29 @@
       font-size: 15px;
     }
 
+    /* Project Image */
+
+    .project-image {
+      margin: 32px 0 24px;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .project-image figcaption {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Skill Tags */
+
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -137,6 +187,8 @@
       font-weight: bold;
     }
 
+    /* Footer */
+
     footer {
       padding: 30px 0;
       border-top: 1px solid var(--border);
@@ -150,39 +202,75 @@
       gap: 20px;
     }
 
-    footer a { color: var(--green); }
+    footer a {
+      color: var(--green);
+    }
+
+    /* Mobile Responsive */
 
     @media (max-width: 700px) {
-      .hero { padding: 70px 0 45px; }
-      .project { padding: 26px; }
-      .footer-inner { flex-direction: column; }
-      .nav-links { gap: 14px; }
+
+      .hero {
+        padding: 70px 0 45px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .project {
+        padding: 24px;
+      }
+
+      .project h3 {
+        font-size: 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
+
   <header>
     <nav class="container">
+
       <a class="logo" href="index.html">
         POOM / GIS
       </a>
 
       <div class="nav-links">
-        <a href="index.html">Home</a>
+
+        <a href="index.html">
+          Home
+        </a>
+
         <a href="https://github.com/Poom911"
            target="_blank"
            rel="noopener noreferrer">
           GitHub
         </a>
+
       </div>
     </nav>
   </header>
 
   <main class="container">
 
+    <!-- Introduction -->
+
     <section class="hero">
+
       <div class="label">
         GEOSPATIAL PORTFOLIO / SELECTED WORK
       </div>
@@ -197,7 +285,10 @@
         geographic information systems,
         spatial analysis, and geospatial modeling.
       </p>
+
     </section>
+
+    <!-- Selected Experience -->
 
     <section class="work">
 
@@ -213,7 +304,7 @@
 
         <h3>
           Bangkok PM2.5 Spatial
-          Modeling & Mapping
+          Modeling &amp; Mapping
         </h3>
 
         <p>
@@ -229,49 +320,54 @@
           patterns.
         </p>
 
-<figure style="margin: 28px 0;">
-  <img
-    src="src="1.png""
-    alt="Bangkok PM2.5 spatial distribution map"
-    style="
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      border: 1px solid #e5e7e3;
-    "
-    loading="lazy"
-  >
-  <figcaption style="
-    margin-top: 12px;
-    font-size: 13px;
-    color: #6c6c6c;
-  ">
-    Example of PM2.5 spatial mapping
-    conducted using ArcGIS Pro.
-  </figcaption>
-</figure>
+        <!-- PM2.5 Map Image -->
+
+        <figure class="project-image">
+
+          <img
+            src="1.png"
+            alt="Bangkok PM2.5 spatial distribution map"
+            loading="lazy"
+          >
+
+          <figcaption>
+            Example of PM2.5 spatial mapping
+            conducted using ArcGIS Pro.
+          </figcaption>
+
+        </figure>
+
+        <!-- Skills -->
 
         <div class="tags">
+
           <span class="tag">ArcGIS Pro</span>
+
           <span class="tag">Spatial Analysis</span>
+
           <span class="tag">Spatial Modeling</span>
+
           <span class="tag">Mapping</span>
+
         </div>
 
       </article>
 
-      <!-- Future projects can be added here -->
+      <!-- Additional projects can be added here -->
 
     </section>
 
   </main>
 
+  <!-- Footer -->
+
   <footer>
+
     <div class="container footer-inner">
 
       <span>
-        &copy; 2026 Poom. Geospatial Portfolio.
+        &copy; 2026 Poom.
+        Geospatial Portfolio.
       </span>
 
       <a href="index.html">
@@ -279,6 +375,7 @@
       </a>
 
     </div>
+
   </footer>
 
 </body>
