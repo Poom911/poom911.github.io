@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="Poom's GIS and Geospatial Analysis Portfolio">
+        content="Poom's GIS and Spatial Analysis Portfolio">
 
   <title>Poom | Geospatial Portfolio</title>
 
@@ -41,6 +41,11 @@
       color: inherit;
     }
 
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
     .container {
       width: min(1100px, 90%);
       margin: auto;
@@ -49,8 +54,8 @@
     /* Navigation */
 
     header {
-      border-bottom: 1px solid var(--border);
       background: var(--surface);
+      border-bottom: 1px solid var(--border);
     }
 
     nav {
@@ -77,7 +82,7 @@
       color: var(--accent);
     }
 
-    /* Hero Section */
+    /* Hero */
 
     .hero {
       padding: 110px 0 100px;
@@ -89,7 +94,6 @@
       font-weight: 700;
       letter-spacing: 2px;
       color: var(--accent);
-      text-transform: uppercase;
     }
 
     h1 {
@@ -99,17 +103,17 @@
       margin: 24px 0;
     }
 
+    .highlight {
+      color: var(--accent);
+    }
+
     .hero p {
       color: var(--muted);
       font-size: 17px;
       max-width: 650px;
     }
 
-    .hero .highlight {
-      color: var(--accent);
-    }
-
-    /* Projects Section */
+    /* Projects */
 
     .section {
       padding: 35px 0 100px;
@@ -127,11 +131,12 @@
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: minmax(0, 520px);
       gap: 24px;
     }
 
     .card {
+      display: block;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -164,6 +169,14 @@
       margin: 0;
     }
 
+    .card-link {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     /* Footer */
 
     footer {
@@ -183,10 +196,9 @@
       color: var(--accent);
     }
 
-    /* Mobile */
+    /* Responsive */
 
     @media (max-width: 700px) {
-
       .hero {
         padding: 75px 0;
       }
@@ -222,21 +234,25 @@
   <header>
     <div class="container">
       <nav>
-        <a class="logo" href="#">POOM / GIS</a>
+        <a class="logo" href="index.html">
+          POOM / GIS
+        </a>
 
         <div class="nav-links">
           <a href="#projects">Projects</a>
           <a href="https://github.com/Poom911"
              target="_blank"
-             rel="noopener noreferrer">GitHub</a>
+             rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Introduction -->
-
   <main class="container">
+
+    <!-- Introduction -->
 
     <section class="hero">
 
@@ -253,9 +269,9 @@
 
       <p>
         Welcome to my geospatial portfolio.
-        My work focuses on GIS, spatial data analysis,
-        spatiotemporal modeling, and geospatial
-        automation using Python.
+        My work focuses on geographic information
+        systems, spatial data analysis, spatial
+        statistics, and spatiotemporal modeling.
       </p>
 
     </section>
@@ -264,44 +280,35 @@
 
     <section class="section" id="projects">
 
-      <h2 class="section-title">Selected Work</h2>
+      <h2 class="section-title">
+        Selected Work
+      </h2>
 
       <p class="section-description">
-        Explore my areas of work in geospatial analysis
-        and GIS automation.
+        Explore my work in GIS, spatial analysis,
+        and geospatial modeling.
       </p>
 
       <div class="projects">
 
-        <!-- Spatial Analysis -->
-<a class="card" href="spatial-analysis.html">
-
-  <div class="card-number">
-    01 / GEOSPATIAL
-  </div>
-
-  <h3>Spatial Analysis</h3>
-
-  <p>
-    GIS and spatiotemporal modeling.
-  </p>
-
-</a>
-        <!-- GIS Automation -->
-
-        <article class="card">
+        <a class="card"
+           href="spatial-analysis.html">
 
           <div class="card-number">
-            02 / AUTOMATION
+            01 / GEOSPATIAL
           </div>
 
-          <h3>GIS Automation</h3>
+          <h3>Spatial Analysis</h3>
 
           <p>
-            Python and ArcPy workflows.
+            GIS and spatiotemporal modeling.
           </p>
 
-        </article>
+          <span class="card-link">
+            Explore Projects &rarr;
+          </span>
+
+        </a>
 
       </div>
 
@@ -315,7 +322,8 @@
     <div class="container footer-content">
 
       <span>
-        © 2026 Poom. Geospatial Portfolio.
+        &copy; 2026 Poom.
+        Geospatial Portfolio.
       </span>
 
       <a href="https://github.com/Poom911"
