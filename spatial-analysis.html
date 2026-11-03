@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Spatial analysis and GIS modeling portfolio">
+        content="Poom's Spatial Analysis Portfolio">
   <title>Spatial Analysis | Poom</title>
 
   <style>
@@ -16,19 +16,16 @@
       --text: #242424;
       --muted: #6c6c6c;
       --green: #526b5a;
-      --dark: #304639;
       --border: #e5e7e3;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       line-height: 1.7;
     }
 
@@ -37,17 +34,12 @@
       text-decoration: none;
     }
 
-    a:focus-visible {
-      outline: 3px solid var(--green);
-      outline-offset: 4px;
-    }
+    a:hover { color: var(--green); }
 
     .container {
-      width: min(1100px, 90%);
+      width: min(1050px, 90%);
       margin: auto;
     }
-
-    /* Navigation */
 
     header {
       background: var(--white);
@@ -58,45 +50,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
       padding: 22px 0;
     }
 
     .logo {
-      font-size: 16px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 24px;
       font-size: 14px;
       color: var(--muted);
     }
 
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    /* Introduction */
-
     .hero {
-      padding: 95px 0 85px;
+      padding: 100px 0 70px;
     }
 
-    .eyebrow {
+    .label {
       color: var(--green);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 2px;
     }
 
     h1 {
-      margin: 20px 0;
       font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.1;
+      line-height: 1.15;
       letter-spacing: -2px;
+      margin: 22px 0;
     }
 
     h1 span { color: var(--green); }
@@ -107,208 +91,100 @@
       font-size: 17px;
     }
 
+    .work {
+      padding: 20px 0 110px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .project {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 42px;
+      margin-bottom: 24px;
+    }
+
+    .project h3 {
+      font-size: 26px;
+      line-height: 1.4;
+      margin: 20px 0;
+    }
+
+    .project p {
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 15px;
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     .tag {
-      padding: 7px 14px;
       border: 1px solid var(--border);
       border-radius: 30px;
-      background: var(--white);
+      padding: 7px 14px;
       color: var(--green);
+      background: var(--bg);
       font-size: 12px;
       font-weight: bold;
     }
-
-    /* Section headings */
-
-    section { margin-bottom: 95px; }
-
-    .section-label {
-      color: var(--green);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-    }
-
-    h2 {
-      font-size: 31px;
-      letter-spacing: -0.7px;
-      margin: 12px 0 25px;
-    }
-
-    h3 { line-height: 1.35; }
-
-    .muted { color: var(--muted); }
-
-    /* Featured project */
-
-    .feature {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--white);
-    }
-
-    .feature-content {
-      padding: 42px;
-    }
-
-    .feature-content h3 {
-      font-size: 28px;
-      margin: 16px 0;
-    }
-
-    .feature-content p {
-      color: var(--muted);
-    }
-
-    .feature-visual {
-      background: var(--dark);
-      color: white;
-      padding: 35px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .visual-title {
-      font-size: 12px;
-      letter-spacing: 2px;
-      opacity: 0.7;
-      margin-bottom: 28px;
-    }
-
-    .step {
-      padding: 15px 0;
-      border-bottom: 1px solid
-        rgba(255,255,255,0.2);
-      font-size: 17px;
-    }
-
-    .step:last-child { border: none; }
-
-    .step small {
-      display: block;
-      font-size: 11px;
-      color: #b9d1bf;
-      letter-spacing: 1px;
-    }
-
-    /* Workflow */
-
-    .workflow {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .workflow-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-    }
-
-    .number {
-      color: var(--green);
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .workflow-card h3 {
-      font-size: 18px;
-      margin: 18px 0 10px;
-    }
-
-    .workflow-card p {
-      font-size: 14px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    /* Outputs */
-
-    .output-panel {
-      background: #eef1ec;
-      border: 1px solid #dde5da;
-      border-radius: 14px;
-      padding: 38px;
-    }
-
-    .output-panel h3 {
-      margin-top: 0;
-    }
-
-    .output-panel p {
-      color: #536256;
-      max-width: 680px;
-    }
-
-    /* Footer */
 
     footer {
+      padding: 30px 0;
       border-top: 1px solid var(--border);
-      padding: 35px 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .footer-content {
+    .footer-inner {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      font-size: 13px;
-      color: var(--muted);
     }
 
     footer a { color: var(--green); }
 
-    @media (max-width: 750px) {
-      .hero { padding: 65px 0; }
-      .feature { grid-template-columns: 1fr; }
-      .feature-content { padding: 28px; }
-      .feature-visual { padding: 28px; }
-      .workflow { grid-template-columns: 1fr; }
-      .output-panel { padding: 25px; }
-      .footer-content { flex-direction: column; }
-      .nav-links { gap: 12px; }
+    @media (max-width: 700px) {
+      .hero { padding: 70px 0 45px; }
+      .project { padding: 26px; }
+      .footer-inner { flex-direction: column; }
+      .nav-links { gap: 14px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <header>
-    <div class="container">
-      <nav>
-        <a class="logo" href="index.html">
-          POOM / GIS
-        </a>
+    <nav class="container">
+      <a class="logo" href="index.html">
+        POOM / GIS
+      </a>
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="https://github.com/Poom911"
-             target="_blank"
-             rel="noopener noreferrer">
-            GitHub
-          </a>
-        </div>
-      </nav>
-    </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/Poom911"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </nav>
   </header>
 
   <main class="container">
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="eyebrow">
-        01 / GEOSPATIAL PORTFOLIO
+    <section class="hero">
+      <div class="label">
+        GEOSPATIAL PORTFOLIO / SELECTED WORK
       </div>
 
       <h1>
@@ -317,164 +193,68 @@
       </h1>
 
       <p class="intro">
-        Exploring geographic patterns through GIS,
-        spatial statistics, and spatiotemporal modeling.
-        My work focuses on transforming spatial data
-        into meaningful analytical insights.
+        A selection of my previous work in
+        geographic information systems,
+        spatial analysis, and geospatial modeling.
       </p>
+    </section>
 
-      <div class="tags">
-        <span class="tag">ArcGIS Pro</span>
-        <span class="tag">Python</span>
-        <span class="tag">Spatial Statistics</span>
-        <span class="tag">Spatial Modeling</span>
-        <span class="tag">Geospatial Visualization</span>
-      </div>
-    </div>
+    <section class="work">
 
-    <!-- Featured Project -->
-    <section>
-      <div class="section-label">
-        FEATURED PROJECT
-      </div>
-      <h2>Selected Research Work</h2>
+      <h2>Selected Experience</h2>
 
-      <article class="feature">
-        <div class="feature-content">
-          <span class="section-label">
-            SPATIOTEMPORAL MODELING
-          </span>
+      <!-- Project 01 -->
 
-          <h3>
-            Bangkok PM2.5 Spatial
-            and Temporal Analysis
-          </h3>
+      <article class="project">
 
-          <p>
-            An environmental geospatial study
-            examining the spatial and temporal
-            patterns of PM2.5 concentrations
-            in the Bangkok metropolitan area.
-          </p>
-
-          <p>
-            The analytical workflow integrates
-            GIS-derived spatial predictors,
-            meteorological variables,
-            regression modeling, and
-            autoregressive techniques.
-          </p>
-
-          <p>
-            <strong>Tools:</strong>
-            ArcGIS Pro, Python, ArcPy,
-            Spatial Statistics, Regression Analysis.
-          </p>
+        <div class="label">
+          01 / SPATIAL MODELING
         </div>
 
-        <div class="feature-visual">
-          <div class="visual-title">
-            ANALYTICAL FRAMEWORK
-          </div>
+        <h3>
+          Bangkok PM2.5 Spatial
+          Modeling & Mapping
+        </h3>
 
-          <div class="step">
-            <small>01 / INPUT</small>
-            Spatial & Temporal Data
-          </div>
+        <p>
+          Applied GIS-based analysis to examine
+          spatial and temporal patterns of PM2.5
+          concentrations in Bangkok.
+        </p>
 
-          <div class="step">
-            <small>02 / ANALYSIS</small>
-            Statistical Modeling
-          </div>
+        <p>
+          Worked with environmental and geographic
+          datasets, spatial modeling, and mapping
+          to visualize and interpret geographic
+          patterns.
+        </p>
 
-          <div class="step">
-            <small>03 / OUTPUT</small>
-            Geospatial Visualization
-          </div>
+        <div class="tags">
+          <span class="tag">ArcGIS Pro</span>
+          <span class="tag">Spatial Analysis</span>
+          <span class="tag">Spatial Modeling</span>
+          <span class="tag">Mapping</span>
         </div>
+
       </article>
-    </section>
 
-    <!-- Methodology -->
-    <section>
-      <div class="section-label">
-        METHODOLOGY
-      </div>
+      <!-- Future projects can be added here -->
 
-      <h2>Analytical Workflow</h2>
-
-      <div class="workflow">
-
-        <article class="workflow-card">
-          <div class="number">01 / DATA</div>
-          <h3>Spatial Data Preparation</h3>
-          <p>
-            Data cleaning, coordinate systems,
-            spatial joins, buffer analysis,
-            and preparation of GIS predictors.
-          </p>
-        </article>
-
-        <article class="workflow-card">
-          <div class="number">02 / MODELING</div>
-          <h3>Statistical Analysis</h3>
-          <p>
-            Correlation analysis, regression
-            modeling, temporal lag variables,
-            and model development.
-          </p>
-        </article>
-
-        <article class="workflow-card">
-          <div class="number">03 / EVALUATION</div>
-          <h3>Validation & Mapping</h3>
-          <p>
-            Model performance evaluation,
-            prediction error analysis,
-            raster processing, and
-            spatial visualization.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Future Gallery -->
-    <section>
-      <div class="section-label">
-        VISUAL OUTPUTS
-      </div>
-
-      <h2>Maps & Analytical Results</h2>
-
-      <div class="output-panel">
-        <h3>Project Visualizations</h3>
-
-        <p>
-          Selected maps, spatial analysis figures,
-          and model evaluation graphics
-          will be added to this section.
-        </p>
-
-        <p>
-          Visual materials will be selected
-          for public presentation after
-          reviewing data-sharing permissions.
-        </p>
-      </div>
     </section>
 
   </main>
 
   <footer>
-    <div class="container footer-content">
+    <div class="container footer-inner">
+
       <span>
-        © 2026 Poom. Geospatial Portfolio.
+        &copy; 2026 Poom. Geospatial Portfolio.
       </span>
 
       <a href="index.html">
         Back to Homepage
       </a>
+
     </div>
   </footer>
 
